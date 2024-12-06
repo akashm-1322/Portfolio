@@ -16,18 +16,13 @@ const Contact = () => {
     return (
         <div className='container contact-page'>
             <div className='text-zone'>
-                <h1>
-                    <span className={letterClass}>C</span>
-                    <span className={`${letterClass} _12`}>o</span>
-                    <span className={`${letterClass} _13`}>n</span>
-                    <span className={`${letterClass} _14`}>t</span>
-                    <span className={`${letterClass} _15`}>a</span>
-                    <span className={`${letterClass} _16`}>c</span>
-                    <span className={`${letterClass} _17`}>t</span>
-                    <span className={`${letterClass} _18`}> </span>
-                    <span className={`${letterClass} _19`}>M</span>
-                    <span className={`${letterClass} _20`}>e</span>
-                </h1>
+            <h1>
+                {"My Professional Links and Contact Details".split("").map((char, index) => (
+                <span key={index} className={`${letterClass} _${index + 1}`}>
+                {char === " " ? "\u00A0" : char}
+                </span>
+               ))}
+            </h1>
                 <ul>
                     <li>
                         <FaLinkedin />
