@@ -1,7 +1,8 @@
 import './Layout.scss';
+import React from 'react';
 import { Suspense } from 'react';
-const Sidebar = React.lazy(()=> import('./Sidebar.js'));
 import { Outlet } from 'react-router-dom';
+const Sidebar = React.lazy(()=> import('./Sidebar.js'));
 
 const Layout = () =>{
     return (

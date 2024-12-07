@@ -1,8 +1,9 @@
-import { useEffect, useState , Suspense} from 'react';
-const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
+import React , { useEffect, useState , Suspense} from 'react';
 import './Home.scss';
 import Logo2 from '../assets/images/ux.png';
 import { Link } from 'react-router-dom';
+const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
+
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');

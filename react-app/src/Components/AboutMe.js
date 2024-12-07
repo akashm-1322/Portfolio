@@ -1,5 +1,4 @@
 import React, { useEffect, useState , Suspense} from 'react';
-const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
 import './AboutMe.scss';
 import { FaArrowRight , FaArrowLeft } from "react-icons/fa";
 import { motion } from 'framer-motion';
@@ -9,6 +8,8 @@ import { SiMongodb, SiExpress } from 'react-icons/si';
 import Marklogic_Logo from '../../src/assets/images/marklogic_logo.jpg';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { BiLogoTypescript } from 'react-icons/bi';
+
+const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
 
 const AboutMe = () => {
   const projectData = [
