@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import AnimatedLetters from './AnimatedLetters';
+import { useEffect, useState , Suspense} from 'react';
+const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
 import './Home.scss';
 import Logo2 from '../assets/images/ux.png';
 import { Link } from 'react-router-dom';
@@ -27,18 +27,26 @@ const Home = () => {
         <div className='container home-page justify-content-center'>
             <div className='text-zone'>
                 <h1>
+                <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={greetingArray} idx={0} />
+                    </Suspense>
                     <br />
+                    <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={0} />
+                    </Suspense>
                 </h1>
                 <br />
                 <img src={Logo2} alt='Frontend Developer' className="logo-img" />
                 <br />
                 <h2>
+                <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={0} />
+                    </Suspense>
                 </h2>
                 <Link to="/contact" className='flat-button'>
+                <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={['C', 'O', 'N', 'T', 'A', 'C', 'T', ' ', 'M', 'E']} idx={0} />
+                    </Suspense>
                 </Link>
             </div>
         </div>

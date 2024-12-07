@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import AnimatedLetters from './AnimatedLetters';
+import React, { useEffect, useState , Suspense} from 'react';
+const AnimatedLetters = React.lazy(() => import('./AnimatedLetters'));
 import './AboutMe.scss';
 import { FaArrowRight , FaArrowLeft } from "react-icons/fa";
 import { motion } from 'framer-motion';
@@ -64,11 +64,13 @@ const AboutMe = () => {
             transition={{ duration: 1 }}
           >
             <h1>
+            <Suspense fallback={<div>Loading...</div>}>
               <AnimatedLetters
                 letterClass="text-animate"
                 strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']}
                 idx={2}
               />
+              </Suspense>
             </h1>
             <motion.p
               className="summary"
