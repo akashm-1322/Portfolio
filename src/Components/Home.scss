@@ -2,27 +2,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 70%; /* Set to occupy 70% of the viewport height */
+    width: 70%; /* Set to occupy 70% of the viewport width */
+    margin-left: 15%; /* Offset by the sidebar width */
+    margin-top: 5%; /* Add a vertical offset from the top */
+    background-color: #121212; /* Background color for the black box */
     position: relative;
-    background-color: #121212;  /* Keep existing background */
-    width: 70%;
-    will-change: contents;
-    position: relative;
-    top: 0%;
-    left: 0%;
     z-index: 1;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
-    
+
+
     .text-zone {
+        display: flex; /* Use flex for consistent alignment */
+        flex-direction: column; /* Stack child elements vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        width: 100%; /* Match the width of the parent container */
+        height: 100%; /* Match the height of the parent container */
         position: relative;
         text-align: center;
-        width: 100%;
-        max-height: 90%;
-        margin: auto;
-        transform: translateY(-50%);
-        
+        margin: 0; /* Remove auto margin for consistent alignment */
+
+
         h1 {
             color: #fff;
             font-size: 60px;
@@ -73,6 +76,7 @@
         }
 
         .flat-button {
+            display: flex;
             align-items: center;
             justify-content: center;
             color: #ffd700;
@@ -84,18 +88,17 @@
             padding: 15px 20px;
             border: 2px solid #ffd700;
             margin-top: 25px;
-            left: 30%;
-            float: left;
             animation: fadeIn 1s 2s backwards;
 
             &:hover {
                 background: #ffd700;
                 color: #333;
-                transform: scale(1.1);  /* Slight enlarge effect on hover */
+                transform: scale(1.1); /* Slight enlarge effect on hover */
             }
         }
     }
 }
+
 
 @keyframes fadeIn {
     0% {

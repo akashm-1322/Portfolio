@@ -9,10 +9,10 @@ const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['A', 'k', 'a', 's', 'h',' ','M'];
     const jobArray = [
-        'W', 'e', 'b', ' ' , 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', 
+        'F','u' , 'l' , 'l', ' ', 'S', 't' , 'a' , 'c' , 'k', ' ' , 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', 
         ' ', '/', ' ', 'F', 'r', 'o', 'n', 't', 'e', 'n', 'd', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', 
         ' ', '/', ' ', 'R', 'e', 'a', 'c', 't', ' ', 'J', 'S', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', 
-        ' ', '/', ' ', 'F', 'u', 'l', 'l', ' ', 'S', 't', 'a', 'c', 'k', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'
+        ' ', '/', ' ', 'M','E','R','N', ' ', 'S', 't', 'a', 'c', 'k', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'
       ];
     const greetingArray = ['H', 'i', ',', ' ', 'I', "'", 'm'];
 
