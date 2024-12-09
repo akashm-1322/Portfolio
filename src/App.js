@@ -1,22 +1,22 @@
-import './App.scss';
-import React from 'react';
-import {BrowserRouter as Router ,  Routes , Route} from 'react-router-dom';
-const Layout = React.lazy( () => import('./Components/Layout'));
-const Home = React.lazy( () => import('./Components/Home'));
-const Contact = React.lazy( () => import('./Components/Contact.js'));
-const AboutMe = React.lazy( () => import('./Components/AboutMe.js'));
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+const Layout = React.lazy(() => import('./Components/Layout'));
+const Home = React.lazy(() => import('./Components/Home'));
+const Contact = React.lazy(() => import('./Components/Contact'));
+const AboutMe = React.lazy(() => import('./Components/AboutMe'));
 
 function App() {
   return (
-    <>
-    <Routes>
-      <Router path="/" element={<Layout/>}>
-      <Router path="/contact" element={<Contact/>}/>
-      <Router path="/about" element={<AboutMe/>}/>
-      <Router index element={<Home/>} />
-      </Router>
-    </Routes>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<AboutMe />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

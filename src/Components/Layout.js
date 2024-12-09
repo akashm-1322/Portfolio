@@ -1,7 +1,7 @@
 import './Layout.scss';
 import React from 'react';
 import { Suspense } from 'react';
-import Home from './Home.js';
+import { Outlet } from 'react-router-dom';
 const Sidebar = React.lazy(()=> import('./Sidebar.js'));
 
 const Layout = () =>{
@@ -13,7 +13,7 @@ const Layout = () =>{
             <div className='page'>
                 
 
-                <Home/>
+                <Outlet/>
                 
 <i class="fa fa-y-combinator" aria-hidden="true"></i>
             </div>
