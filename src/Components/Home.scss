@@ -1,0 +1,128 @@
+.container {
+    width: 100%;
+    will-change: contents;
+    position: absolute;
+    opacity: 0;
+    top: 5%;
+    bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #121212;  /* Keep existing background */
+    
+    .text-zone {
+        position: relative;
+        text-align: center;
+        width: 60%;
+        max-height: 90%;
+        transform: translateY(-50%);
+        
+        h1 {
+            color: #fff;
+            font-size: 60px;
+            font-family: 'Coolvetica';
+            margin: 0;
+            font-weight: 400;
+            animation: fadeIn 1s 0.5s forwards;
+
+            &::before {
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                color: #ffd700;
+                font-size: 18px;
+                position: absolute;
+                margin-top: -40px;
+                left: 15px;
+                opacity: 0.6;
+            }
+
+            &::after {
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                color: #ffd700;
+                font-size: 18px;
+                position: absolute;
+                margin-top: 18px;
+                margin-left: 20px;
+                animation: fadeIn 1s 1.7s backwards;
+                opacity: 0.6;
+            }
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            margin-top: 20px;
+            animation: bounceIn 1s 1.5s forwards; /* Bounce in effect for logo */
+        }
+
+        h2 {
+            color: #8d8d8d;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 18px;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+
+        .flat-button {
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 15px 20px;
+            border: 2px solid #ffd700;
+            margin-top: 25px;
+            left: 30%;
+            float: left;
+            animation: fadeIn 1s 2s backwards;
+
+            &:hover {
+                background: #ffd700;
+                color: #333;
+                transform: scale(1.1);  /* Slight enlarge effect on hover */
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
