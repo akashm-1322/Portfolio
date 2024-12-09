@@ -27,15 +27,13 @@ const Home = () => {
     return (
         <div className='home-page justify-content-center'>
             <div className='text-zone'>
-                <h1>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <AnimatedLetters letterClass={letterClass} strArray={greetingArray} idx={0} />
+                    <AnimatedLetters letterClass={letterClass} strArray={greetingArray} idx={0} style={{ fontSize: '24px' }} />
                     </Suspense>
                     <br />
                     <Suspense fallback={<div>Loading...</div>}>
-                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={0} />
+                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={0} style={{ fontSize: '24px' }}  />
                     </Suspense>
-                </h1>
                 <br />
                 <img src={Logo2} alt='Frontend Developer' className="logo-img" />
                 <br />
