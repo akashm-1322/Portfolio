@@ -1,7 +1,7 @@
 import './Layout.scss';
 import React from 'react';
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import Home from './Home.js';
 const Sidebar = React.lazy(()=> import('./Sidebar.js'));
 
 const Layout = () =>{
@@ -13,15 +13,9 @@ const Layout = () =>{
             <div className='page'>
                 
 
-                <Outlet/>
-                <span className='tags bottom-tags'>
-                    
-                    
-                    <span className='bottom-tag-html'>
-
-                    </span>
-                </span>
-
+                <Home/>
+                
+<i class="fa fa-y-combinator" aria-hidden="true"></i>
             </div>
         </div>
     )
