@@ -75,7 +75,7 @@
 }
 
 .project-card.enlarged {
-  height: 130%; /* Increase the height by 30% */
+  height: 110%; /* Increase the height by 30% */
 }
 
 .project-logo {
@@ -84,7 +84,7 @@
   margin-bottom: 15px;
 }
 
-.projects-container .projects-list .project-card .project-details {
+.project-details {
   text-align: center;
   font-size: 1.75em; /* Increase the font size by 25% */
   transition: font-size 0.3s ease;
@@ -105,7 +105,7 @@
 
 /* Technologies Section */
 .technologies-container {
-  width: 90%;
+  width: 100%;
   margin: 10px;
 }
 
