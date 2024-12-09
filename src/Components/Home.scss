@@ -26,16 +26,15 @@
         margin: 0; /* Remove auto margin for consistent alignment */
 
 
-        h1 {
+        .head1 {
             color: #fff;
-            font-size: 40px;
+            font-size: 36px;
             font-family: 'Coolvetica';
             margin: 0;
             font-weight: 400;
             animation: fadeIn 1s 0.5s forwards;
 
             &::before {
-                content: '<h1>';
                 font-family: 'La Belle Aurore';
                 color: #ffd700;
                 font-size: 18px;
@@ -46,7 +45,6 @@
             }
 
             &::after {
-                content: '<h1>';
                 font-family: 'La Belle Aurore';
                 color: #ffd700;
                 font-size: 18px;

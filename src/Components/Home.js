@@ -27,6 +27,7 @@ const Home = () => {
     return (
         <div className='home-page justify-content-center'>
             <div className='text-zone'>
+                <div className='head1'>
                 <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={greetingArray} idx={0} style={{ fontSize: '24px' }} />
                     </Suspense>
@@ -34,6 +35,7 @@ const Home = () => {
                     <Suspense fallback={<div>Loading...</div>}>
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={0} style={{ fontSize: '24px' }}  />
                     </Suspense>
+                    </div>
                 <br />
                 <img src={Logo2} alt='Frontend Developer' className="logo-img" />
                 <br />
