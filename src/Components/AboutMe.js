@@ -34,15 +34,15 @@ const AboutMe = () => {
   ];
 
   const technologies = [
-    { name: 'React.js', icon: <GrReactjs /> },
-    { name: 'Node.js', icon: <FaNodeJs /> },
-    { name: 'JavaScript', icon: <IoLogoJavascript /> },
-    { name: 'TypeScript', icon: <BiLogoTypescript /> },
-    { name: 'HTML', icon: <FaHtml5 /> },
-    { name: 'CSS', icon: <FaCss3Alt /> },
-    { name: 'MarkLogic', icon: <img src={Marklogic_Logo} alt="MarkLogic Logo" className="tech-logo" /> },
-    { name: 'MongoDB', icon: <SiMongodb /> },
-    { name: 'Express.js', icon: <SiExpress /> },
+    { name: 'React.js', icon: <GrReactjs />, color: '#61DAFB' },
+    { name: 'Node.js', icon: <FaNodeJs />, color: '#339933' },
+    { name: 'JavaScript', icon: <IoLogoJavascript />, color: '#F7DF1E' },
+    { name: 'TypeScript', icon: <BiLogoTypescript />, color: '#3178C6' },
+    { name: 'HTML', icon: <FaHtml5 />, color: '#E34F26' },
+    { name: 'CSS', icon: <FaCss3Alt />, color: '#1572B6' },
+    { name: 'MarkLogic', icon: <img src={Marklogic_Logo} alt="MarkLogic Logo" className="tech-logo" />, color: 'inherit' }, // Use default color for the image
+    { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
+    { name: 'Express.js', icon: <SiExpress />, color: '#000000' },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -123,7 +123,7 @@ const AboutMe = () => {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="tech-icon">{tech.icon}</span>
+                  <span className="tech-icon" style={{color: tech.color}}>{tech.icon}</span>
                   <span className="tech-name">{tech.name}</span>
                 </motion.div>
               ))}
