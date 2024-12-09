@@ -148,3 +148,43 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .contact-page {
+    position: relative;
+    display: flex;
+    width: calc(70% - 10px); /* Start 5px from sidebar and end 5px before right */
+    padding: 10px;/* Reduce padding for smaller screens */
+    margin-left: 70px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;/* Adjust border radius for a compact look */
+  }
+
+  .text-zone {
+    width: 90%; /* Make the text zone wider for better use of space */
+    padding: 10px; /* Reduce padding inside the text zone */
+    margin: 10px auto; /* Adjust margins for smaller screens */
+  }
+
+  .text-zone h1 {
+    font-size: 2rem; /* Reduce font size for the heading */
+    margin-bottom: 20px; /* Adjust margins for spacing */
+    margin-top: 20px;
+  }
+
+  .text-zone ul li {
+    font-size: 1.4rem; /* Reduce font size for list items */
+    gap: 5px; /* Reduce the gap between icon and text */
+    margin: 10px 0; /* Reduce vertical spacing */
+  }
+
+  .text-zone ul li svg {
+    font-size: 1.6rem; /* Reduce icon size */
+  }
+
+  .text-zone ul li a {
+    font-size: 1.2rem; /* Reduce font size for links */
+  }
+}
+

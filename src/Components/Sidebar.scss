@@ -13,6 +13,7 @@
     transition: width 0.3s ease-in-out;
     padding: 20px 0;
     z-index: 10;
+    font-weight: 700;
 
     &:hover {
         width: 200px; /* Expands on hover */
@@ -139,7 +140,7 @@
         }
 
         .nav-item {
-            font-size: 24px; /* Smaller font for mobile */
+            font-size: 16px; /* Smaller font for mobile */
             padding: 10px;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -149,7 +150,7 @@
             }
 
             a {
-                font-size: 18px; /* Smaller link text */
+                font-size: 12px; /* Smaller link text */
             }
         }
 
@@ -184,4 +185,47 @@
             }
         }
     }
+
+    @media (max-width: 600px) {
+        .nav-bar {
+          width: 50px; /* Reduce the navbar width for smaller devices */
+          padding: 10px 0;
+          font-weight: 800;
+      
+          &:hover {
+            width: 50px; /* Prevent expansion on hover for smaller screens */
+          }
+      
+          .logo img {
+            width: 40%; /* Make the logo smaller */
+          }
+      
+          nav {
+            margin-top: 30px;
+            margin-bottom: 30px;
+      
+            .nav-item {
+              font-size: 14px; /* Smaller font for nav items */
+              padding: 8px;
+              margin-top: 8px;
+              margin-bottom: 8px;
+      
+              .nav-text {
+                font-size: 10px; /* Smaller text for nav text */
+                display: none; /* Keep text hidden */
+              }
+      
+              a {
+                font-size: 12px; /* Smaller font for links */
+                padding: 8px;
+              }
+            }
+          }
+      
+          ul {
+            display: none; /* Hide the list entirely on smaller devices */
+          }
+        }
+      }
+      
 }

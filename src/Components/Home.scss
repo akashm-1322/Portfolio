@@ -157,10 +157,14 @@
         }
     }
 
-    @media screen and (max-width: 480px) {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
+    @media screen and (max-width: 600px) {
+        display: flex;
+        width: calc(70% - 10px); /* Start 5px from sidebar and end 5px before right */
+        padding: 10px;/* Reduce padding for smaller screens */
+        margin-left: 70px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        margin-top: 15px;
 
         .text-zone {
             .head1 {
