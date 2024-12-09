@@ -1,22 +1,213 @@
+// Color and Font Settings
 $primary-color: #ffd700;
 
 @import 'animate.css';
 
-@font-face{
+@font-face {
   font-family: 'Helvetica Neue';
-  src:url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
 }
 
-@font-face{
+@font-face {
   font-family: 'La Belle Aurore';
-  src:url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
 }
 
-@font-face{
+@font-face {
   font-family: 'Helvetica Neue';
-  src:url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 
-input , textarea {
+input,
+textarea {
   font-family: 'Helvetica Neue';
+}
+
+// Main Navbar Styling
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #000;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out;
+  padding: 20px 0;
+  z-index: 10;
+
+  &:hover {
+    width: 200px; // Expands on hover
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 60%;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+    .nav-item {
+      font-size: 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+
+      .nav-text {
+        display: none; // Hide text by default
+        color: #f4f4f4;
+        margin-top: 5px;
+        font-size: 14px;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+
+        .nav-text {
+          display: block; // Show text when hovering
+        }
+
+        & > svg {
+          transform: translateY(-5px); // Move icon up
+        }
+      }
+
+      a {
+        font-size: 24px;
+        color: #f4f4f4;
+        padding: 10px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        display: block;
+        text-decoration: none; // Remove underline
+      }
+
+      a:hover {
+        color: #0072b1;
+        transform: translateY(-5px); // Move up on hover
+        background-color: #f4f4f4;
+        border-radius: 5px;
+      }
+
+      .active {
+        color: #0072b1;
+      }
+    }
+  }
+
+  ul {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1); // Scale the icons on hover
+      }
+
+      a {
+        display: block;
+        margin: 10px 0;
+        font-size: 32px;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2); // Slightly enlarge icons
+          color: #0072b1; // Change icon color on hover
+        }
+      }
+    }
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    width: 60px;
+    &:hover {
+      width: 60px; // Do not expand on hover on mobile
+    }
+
+    .logo img {
+      width: 50%;
+    }
+
+    .nav-item {
+      font-size: 24px; // Smaller font for mobile
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      .nav-text {
+        font-size: 12px; // Smaller text for mobile
+      }
+
+      a {
+        font-size: 18px; // Smaller link text
+      }
+    }
+
+    ul {
+      display: none; // Hide the list on mobile
+    }
+  }
+
+  // For tablet and smaller screens
+  @media (max-width: 1024px) and (min-width: 769px) {
+    width: 100px;
+    &:hover {
+      width: 100px; // Do not expand on hover on tablets
+    }
+
+    .logo img {
+      width: 55%;
+    }
+
+    .nav-item {
+      font-size: 28px; // Slightly smaller font
+      padding: 15px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+
+      .nav-text {
+        font-size: 14px; // Smaller text for tablets
+      }
+
+      a {
+        font-size: 20px; // Slightly smaller link text
+      }
+    }
+  }
 }

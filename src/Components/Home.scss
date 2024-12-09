@@ -13,7 +13,6 @@
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 
-
     .text-zone {
         display: flex; /* Use flex for consistent alignment */
         flex-direction: column; /* Stack child elements vertically */
@@ -24,7 +23,6 @@
         position: relative;
         text-align: center;
         margin: 0; /* Remove auto margin for consistent alignment */
-
 
         .head1 {
             color: #fff;
@@ -95,30 +93,95 @@
             }
         }
     }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounceIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 1024px) {
+        width: 80%; /* Adjust width for tablets */
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    @media screen and (max-width: 768px) {
+     .home-page{
+        flex-direction: column;
+        height: auto; /* Allow content to expand naturally */
+        width: 90%; /* Reduce width further for mobile devices */
+        margin-left: 30%; /* Adjust left margin */
+        margin-right: 10%;
+        padding: 5px; /* Add padding for better spacing */
+
+        .text-zone {
+            .head1 {
+                font-size: 12px; /* Adjust font size for mobile */
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2 {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .flat-button {
+                font-size: 10px;
+                padding: 5px; /* Adjust padding for smaller buttons */
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+
+        .text-zone {
+            .head1 {
+                font-size: 22px;
+            }
+
+            .logo-img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h2 {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .flat-button {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+        }
+    }
 }
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
 }

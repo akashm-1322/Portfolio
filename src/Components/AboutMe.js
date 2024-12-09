@@ -1,5 +1,5 @@
 import React, { useEffect, useState , Suspense} from 'react';
-import './AboutMe.scss';
+import './AboutMe.css';
 import { FaArrowRight , FaArrowLeft } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { GrReactjs } from 'react-icons/gr';

@@ -4,9 +4,13 @@
     position: absolute;
 }
 
-.top-tags{
+.top-tags {
     bottom: auto;
     top: 35px;
+    font-size: 24px; /* Adjust font size for larger screens */
+    font-family: 'La Belle Aurore';
+    color: #ffd700;
+    opacity: 0.6;
 }
 
 .tags {
@@ -21,4 +25,53 @@
 
 .bottom-tag-html {
     margin-left: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .top-tags {
+        top: 20px; /* Adjust for tablet devices */
+        font-size: 22px; /* Reduce font size for tablets */
+    }
+
+    .tags {
+        left: 100px; /* Adjust left positioning for tablet */
+        font-size: 16px; /* Reduce font size for tablet */
+    }
+
+    .bottom-tag-html {
+        margin-left: 15px; /* Reduce margin on tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-tags {
+        top: 15px; /* Further adjust for mobile devices */
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+
+    .tags {
+        left: 80px; /* Adjust left positioning for mobile */
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+
+    .bottom-tag-html {
+        margin-left: 10px; /* Reduce margin on mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-tags {
+        top: 10px; /* Adjust for small screens */
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    .tags {
+        left: 50px; /* Adjust left positioning for smaller screens */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .bottom-tag-html {
+        margin-left: 5px; /* Adjust margin for smaller screens */
+    }
 }

@@ -126,4 +126,62 @@
             }
         }
     }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        width: 60px;
+        &:hover {
+            width: 60px; /* Do not expand on hover on mobile */
+        }
+
+        .logo img {
+            width: 50%;
+        }
+
+        .nav-item {
+            font-size: 24px; /* Smaller font for mobile */
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .nav-text {
+                font-size: 12px; /* Smaller text for mobile */
+            }
+
+            a {
+                font-size: 18px; /* Smaller link text */
+            }
+        }
+
+        ul {
+            display: none; /* Hide the list on mobile */
+        }
+    }
+
+    /* For tablet and smaller screens */
+    @media (max-width: 1024px) and (min-width: 769px) {
+        width: 100px;
+        &:hover {
+            width: 100px; /* Do not expand on hover on tablets */
+        }
+
+        .logo img {
+            width: 55%;
+        }
+
+        .nav-item {
+            font-size: 28px; /* Slightly smaller font */
+            padding: 15px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+            .nav-text {
+                font-size: 14px; /* Smaller text for tablets */
+            }
+
+            a {
+                font-size: 20px; /* Slightly smaller link text */
+            }
+        }
+    }
 }

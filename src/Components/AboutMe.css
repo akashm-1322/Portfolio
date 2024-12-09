@@ -1,0 +1,372 @@
+/* General Styles for About Me Section */
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  color: #ddd;
+}
+
+/* Text Zone Section */
+.text-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.text-zone h1 {
+  font-size: 4rem;
+  color: #f2a712;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-out;
+}
+
+.text-zone .summary {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 80%;
+  margin: 20px auto;
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Projects Section */
+.projects-container {
+  width: 80%;
+  margin: 20px 0;
+}
+
+.projects-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #f2a712;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%; /* Ensure the height takes available space */
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-card.enlarged {
+  height: 130%; /* Increase the height by 30% */
+}
+
+.project-logo {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.projects-container .projects-list .project-card .project-details {
+  text-align: center;
+  font-size: 1.75em; /* Increase the font size by 25% */
+  transition: font-size 0.3s ease;
+}
+
+.project-details:hover {
+  font-size: 1.25em; /* Increased font size on hover */
+}
+.project-details h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* Technologies Section */
+.technologies-container {
+  width: 90%;
+  margin: 10px;
+}
+
+.technologies-container h2 {
+  text-align: center;
+  font-size: 6rem;
+  color: #f2a712;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.technology-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technology-card:hover {
+  transform: scale(1.05); /* Optional hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Optional hover shadow */
+}
+
+.tech-icon {
+  font-size: 6rem;
+}
+
+.tech-icon img {
+  width: 80px;
+  height: 40px;
+}
+
+.tech-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.controls .arrow {
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls .arrow:hover {
+  background: #007acc;
+  transform: scale(1.2);
+}
+
+.controls .left-arrow {
+  position: absolute;
+  left: 160px;
+}
+
+.controls .right-arrow {
+  position: absolute;
+  right: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Controls Arrow Sizes for Smaller Screens */
+.controls .arrow {
+  font-size: 2rem;
+}
+
+
+/* Responsive Design for Devices Between 768px and 1200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .summary {
+    font-size: 3rem;
+    max-width: 85%;
+  }
+
+  .projects-list .project-card {
+    width: 45%;
+  }
+
+  .project-logo {
+    max-width: 80%;
+    max-height: 60%;
+    width: 175px;
+    height: 140px;
+  }
+
+  .project-details {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .technologies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .technologies-container {
+    overflow-y: auto;
+  }
+
+  .technologies-container h2{
+    font-size: 3rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+    border: 2px solid #fff;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+
+  .arrow {
+    font-size: 2.2rem;
+  }
+
+  .left-arrow {
+    left: 100px;
+  }
+
+  .right-arrow {
+    right: 30px;
+  }
+}
+
+/* Responsive Design for Devices with Screen Width ≤ 768px */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .summary {
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .projects-list .project-card {
+    width: 100%;
+  }
+
+  .project-logo {
+    max-width: 100%;
+    max-height: 50%;
+    width: 120px;
+    height: 100px;
+  }
+
+  .project-details {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .technologies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .technologies-container{
+    overflow-y: auto;
+    }
+
+  .technologies-container h2{
+      font-size: 2.2rem;
+    }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+    border: 2px solid #fff;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+
+  .arrow {
+    font-size: 2rem;
+  }
+
+  .left-arrow {
+    left: 100px;
+  }
+
+  .right-arrow {
+    right: 30px;
+  }
+
+  .text-zone,
+  .projects-container,
+  .technologies-container {
+    padding: 10px;
+  }
+}
