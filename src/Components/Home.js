@@ -25,7 +25,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='container home-page justify-content-center'>
+        <div className='home-page justify-content-center'>
             <div className='text-zone'>
                 <h1>
                 <Suspense fallback={<div>Loading...</div>}>
