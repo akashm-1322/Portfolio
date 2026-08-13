@@ -412,10 +412,12 @@ for project in personal_projects:
 
     if project.get("links"):
         link_html = f"""
-        <p>🔗 <a href="{project['links']}" target="_blank"
-        style="color:#38bdf8;">
-        {project['links']}
-        </a></p>
+        <p>
+        🔗 <a href="{project['links']}" target="_blank"
+        style="color:#38bdf8; text-decoration:none;">
+        View Project
+        </a>
+        </p>
         """
 
     st.markdown(f"""
