@@ -110,6 +110,14 @@ personal_projects = [
     "links":"https://smart-healthcare-assistant-two.vercel.app/",
     "title":"Smart Healthcare Assistant",
     "description":"Created a Smart Healthcare Assistant web app From a group of 4 during Hackathons using React.js and Node.js, integrating AI-driven symptom analysis and health recommendations to enhance user health management."
+    },
+    {
+    "title": "Cricket Analysis Dashboard",
+    "description": "Built an interactive cricket analytics dashboard to explore player and match performance using data-driven visualizations, statistical analysis, and an intuitive web interface for extracting actionable insights from cricket data."
+    },
+    {
+    "title": "LLM + RAG Next-Sequence Prediction System",
+    "description": "Built an end-to-end LLM-powered RAG system using Python, FAISS, GPT, Transformers, and semantic embeddings, with MLflow-based experiment tracking and evaluation using BLEU, perplexity, and Top-K accuracy to measure retrieval and generation quality."
     }
 ]
 
