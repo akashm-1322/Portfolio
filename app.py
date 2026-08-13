@@ -407,12 +407,14 @@ st.markdown("\n", unsafe_allow_html=True)
 st.markdown("<div id='projects' class='section-anchor'></div>", unsafe_allow_html=True)
 st.markdown("<div class='section-title'>🚀 Personal Projects</div>", unsafe_allow_html=True)
 for project in personal_projects:
+
     link_html = ""
 
     if project.get("links"):
         link_html = f"""
-        <p>🔗 <a href="{project['links']}" target="_blank" style="color:#38bdf8;">
-            View Project
+        <p>🔗 <a href="{project['links']}" target="_blank"
+        style="color:#38bdf8; text-decoration:none;">
+        View Project
         </a></p>
         """
 
