@@ -113,11 +113,11 @@ personal_projects = [
     },
     {
     "title": "Cricket Analysis Dashboard",
-    "description": "Built an interactive cricket analytics dashboard to explore player and match performance using data-driven visualizations, statistical analysis, and an intuitive web interface for extracting actionable insights from cricket data."
+    "description": "Built an interactive cricket analytics dashboard to explore player and match performance using data-driven visualizations, statistical analysis, and an intuitive web interface for extracting actionable insights from cricket data[Built ML Modules for this project]."
     },
     {
     "title": "LLM + RAG Next-Sequence Prediction System",
-    "description": "Built an end-to-end LLM-powered RAG system using Python, FAISS, GPT, Transformers, and semantic embeddings, with MLflow-based experiment tracking and evaluation using BLEU, perplexity, and Top-K accuracy to measure retrieval and generation quality."
+    "description": "Built an end-to-end LLM-powered RAG system using Python, FAISS, GPT, Transformers, and semantic embeddings, with MLflow-based experiment tracking and evaluation using BLEU, perplexity, and Top-K accuracy to measure retrieval and generation quality[Built ML Modules for this project]."
     }
 ]
 
